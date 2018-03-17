@@ -1,0 +1,18 @@
+kolor(czerwony).
+kolor(zielony).
+kolor(niebieski).
+
+sasiad(polska,bialorus).
+sasiad(polska,ukraina).
+sasiad(polska,slowacja).
+sasiad(polska,czechy).
+sasiad(ukraina,bialorus).
+sasiad(ukraina,slowacja).
+sasiad(czechy,slowacja).	
+
+koloruj :-
+	sasiad(P,U),
+	kolor(PLKolor),
+	kolor(UKKolor),
+	PLKolor \= UKKolor.
+	
