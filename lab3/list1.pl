@@ -61,6 +61,14 @@ odwroc([],[]).
 odwroc([H|T],L) :-
 	odwroc(T,R),
 	sklej(R,[H],L).
+	
+odwroc2(L,R):-
+	odwr2(L,[],R).
+	
+odwr2([H|T],A,R):-
+	odwr2(T,[H|A],R).
+	
+odwr2([],A,A).
 
 wypisz([H|T]) :-
 	put(H), wypisz(T).
@@ -104,7 +112,7 @@ znaczy(4,cztery). znaczy(5,piec).
 znaczy(6,szesc).  znaczy(7,siedem).
 znaczy(8,osiem).  znaczy(9,dziewiec).
 
-przeloz([],X).
+przeloz([],_).
 przeloz([H|T],X):-
 	znaczy(H,Napis),
 	przeloz(T,Z),

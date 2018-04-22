@@ -9,3 +9,5 @@ delrule:- retract((b(_,_):-_)).
  
 start:-addrule, b(X,Y), write(X), write('  '), write(Y),nl,fail.
 start.
+
+:-start.
