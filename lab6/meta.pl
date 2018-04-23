@@ -1,9 +1,9 @@
 :- include(readstr).
  
 odpowiedz :-
-	write('\'matka\' czy \'ojciec\'? '),
+	write('\'matka\' czy \'ojciec\'? '),nl,
 	read_atom(X),
-	write('kogo? '),
+	write('kogo? '),nl,
 	read_atom(Y),
 	Q =.. [X,Kto,Y],
 	display(Q),
@@ -25,7 +25,7 @@ rozwiaz3((G1,G2)) :- !,
 	rozwiaz3(G1),
 	rozwiaz3(G2).
 rozwiaz3(G) :-
-	write('Wywoluje:  '), write(G), nl,
+	write('Wywoluje:  '),nl, write(G), nl,
 	clause(G,B),
 	rozwiaz3(B),
-	write('Wyjscie:   '), write(G), nl.
+	write('Wyjscie:   '),nl, write(G), nl.

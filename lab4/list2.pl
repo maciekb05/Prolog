@@ -83,27 +83,10 @@ usun3pio(L,L1):-
 	sklej([_,_,_],X,L),
 	sklej(L1,[_,_,_],X).
 
-
-parzysta([_,_]).
-parzysta([_,_|Tail]):-
-	parzysta(Tail).
 	
-nieparzysta(X):-
-	not(parzysta(X)).
-	
-
-
-parzysta1([_,_]):- !.
-parzysta1(L):-
-	[_,_|T] = L,
-	not(nieparzysta1(T)).
-	
-nieparzysta1(L):-
-	not(parzysta1(L)).
-	
-parzysta2([]).
-parzysta2([_|L]) :- nieparzysta2(L).
-nieparzysta2([_|L]) :- parzysta2(L).
+parzysta([]).
+parzysta([_|L]) :- nieparzysta(L).
+nieparzysta([_|L]) :- parzysta(L).
 	
 palindrom(L):-
 	odwroc(L,X),
