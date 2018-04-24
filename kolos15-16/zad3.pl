@@ -17,5 +17,3 @@ answer(Trudne) :-
 	nl,
 	read(Znaczenie),
 	assert(trudne(Trudne,Znaczenie)).
-	
-	
